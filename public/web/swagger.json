@@ -1,0 +1,87 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "OpenApi Demo",
+        "description": "L5 Swagger OpenApi description",
+        "contact": {
+            "email": "tigranpetrasyan@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/delivery/fast": {
+            "post": {
+                "tags": [
+                    "Fast_method"
+                ],
+                "summary": "Method to calculating the cost of fast delivery.",
+                "operationId": "5aa058158ae488248fcca324216bb77e",
+                "requestBody": {
+                    "content": {
+                        "json": {
+                            "schema": {
+                                "properties": {
+                                    "weight": {
+                                        "type": "integer"
+                                    },
+                                    "sourceKladr": {
+                                        "type": "string"
+                                    },
+                                    "targetKladr": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Fast Delivery"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/delivery/slow": {
+            "post": {
+                "tags": [
+                    "Slow_method"
+                ],
+                "summary": "Method to calculating the cost of slow delivery.",
+                "operationId": "8c7f997b31570ad5a5db129b7ff3cf5b",
+                "requestBody": {
+                    "content": {
+                        "json": {
+                            "schema": {
+                                "properties": {
+                                    "weight": {
+                                        "type": "integer"
+                                    },
+                                    "sourceKladr": {
+                                        "type": "string"
+                                    },
+                                    "targetKladr": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Slow Delivery"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        }
+    }
+}
